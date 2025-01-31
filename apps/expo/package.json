@@ -1,16 +1,16 @@
 {
-  "name": "@acme/expo",
+  "name": "@mooked/expo",
   "version": "0.1.0",
   "private": true,
   "main": "index.ts",
   "scripts": {
+    "android": "expo run:android",
     "clean": "git clean -xdf .cache .expo .turbo android ios node_modules",
     "dev": "expo start",
     "dev:android": "expo start --android",
     "dev:ios": "expo start --ios",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
     "format": "prettier --check . --ignore-path ../../.gitignore",
+    "ios": "expo run:ios",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"
   },
@@ -43,14 +43,14 @@
     "superjson": "2.2.2"
   },
   "devDependencies": {
-    "@acme/api": "workspace:*",
-    "@acme/eslint-config": "workspace:*",
-    "@acme/prettier-config": "workspace:*",
-    "@acme/tailwind-config": "workspace:*",
-    "@acme/tsconfig": "workspace:*",
     "@babel/core": "^7.26.7",
     "@babel/preset-env": "^7.26.7",
     "@babel/runtime": "^7.26.7",
+    "@mooked/api": "workspace:*",
+    "@mooked/eslint-config": "workspace:*",
+    "@mooked/prettier-config": "workspace:*",
+    "@mooked/tailwind-config": "workspace:*",
+    "@mooked/tsconfig": "workspace:*",
     "@types/babel__core": "^7.20.5",
     "@types/react": "catalog:react18",
     "eslint": "catalog:",
@@ -58,5 +58,5 @@
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@mooked/prettier-config"
 }

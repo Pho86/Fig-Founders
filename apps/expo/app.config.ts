@@ -2,9 +2,9 @@ import type { ConfigContext, ExpoConfig } from "expo/config";
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "expo",
+  name: "mooked",
   slug: "expo",
-  scheme: "expo",
+  scheme: "mooked",
   version: "0.1.0",
   orientation: "portrait",
   icon: "./assets/icon.png",
@@ -29,14 +29,14 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       backgroundColor: "#1F104A",
     },
   },
-  // extra: {
-  //   eas: {
-  //     projectId: "your-eas-project-id",
-  //   },
-  // },
+  extra: {
+    eas: {
+      projectId: "bd902549-04d0-44a1-b516-ac2a7542566c",
+    },
+  },
   experiments: {
     tsconfigPaths: true,
     typedRoutes: true,
   },
-  plugins: ["expo-router"],
+  plugins: ["expo-router"]
 });
