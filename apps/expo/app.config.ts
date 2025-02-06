@@ -3,7 +3,7 @@ import type { ConfigContext, ExpoConfig } from "expo/config";
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: "mooked",
-  slug: "expo",
+  slug: "mooked",
   scheme: "mooked",
   version: "0.1.0",
   orientation: "portrait",
@@ -19,11 +19,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   assetBundlePatterns: ["**/*"],
   ios: {
-    bundleIdentifier: "your.bundle.identifier",
+    bundleIdentifier: "com.mooked",
     supportsTablet: true,
   },
   android: {
-    package: "your.bundle.identifier",
+    package: "com.mooked",
     adaptiveIcon: {
       foregroundImage: "./assets/icon.png",
       backgroundColor: "#1F104A",
