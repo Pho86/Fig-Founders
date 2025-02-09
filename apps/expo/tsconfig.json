@@ -1,22 +1,10 @@
 {
-  "extends": ["@mooked/tsconfig/base.json"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./src/*"]
-    },
-    "jsx": "react-native",
-    "types": ["nativewind/types"],
-    "checkJs": false,
-    "moduleSuffixes": [".ios", ".android", ".native", ""]
-  },
+  "compilerOptions": {},
+  "extends": "expo/tsconfig.base",
   "include": [
-    "src",
-    "*.ts",
-    "*.js",
+    "**/*.ts",
+    "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "nativewind-env.d.ts"
-  ],
-  "exclude": ["node_modules"]
+    "expo-env.d.ts"
+  ]
 }

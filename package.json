@@ -3,9 +3,9 @@
   "private": true,
   "engines": {
     "node": ">=22.10.0",
-    "pnpm": "^9.15.4"
+    "pnpm": "^10"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.2.1",
   "scripts": {
     "build": "turbo run build",
     "clean": "git clean -xdf node_modules",
@@ -21,14 +21,20 @@
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
     "typecheck": "turbo run typecheck",
-    "ui-add": "turbo run ui-add"
+    "ui-add": "turbo run ui-add",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   },
   "devDependencies": {
     "@mooked/prettier-config": "workspace:*",
     "@turbo/gen": "^2.3.4",
     "prettier": "catalog:",
     "turbo": "^2.3.4",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "expo": "~52.0.28",
+    "react": "18.3.1",
+    "react-native": "0.76.6"
   },
-  "prettier": "@mooked/prettier-config"
+  "prettier": "@mooked/prettier-config",
+  "version": "1.0.0"
 }
