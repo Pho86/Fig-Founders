@@ -78,3 +78,18 @@ export const Session = pgTable("session", (t) => ({
 export const SessionRelations = relations(Session, ({ one }) => ({
   user: one(User, { fields: [Session.userId], references: [User.id] }),
 }));
+
+
+export const RecipeSchema = z.object({
+  id: z.number(),
+  title: z.string(),
+  image: z.string().optional(),
+  imageType: z.string().optional(),
+  summary: z.string().optional(),
+  readyInMinutes: z.number().optional(),
+  cookingMinutes: z.number().optional(),
+  preparationMinutes: z.number().optional(),
+  instructions: z.string().optional(),
+});
+
+export type Recipe = z.infer<typeof RecipeSchema>;

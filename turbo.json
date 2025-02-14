@@ -51,7 +51,8 @@
     "AUTH_DISCORD_SECRET",
     "AUTH_REDIRECT_PROXY_URL",
     "AUTH_SECRET",
-    "PORT"
+    "PORT",
+    "SPOONACULAR_API_KEY"
   ],
   "globalPassThroughEnv": [
     "NODE_ENV",
