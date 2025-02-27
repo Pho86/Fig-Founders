@@ -82,6 +82,9 @@ const client = z.object({
   API_URL: z.string(),
   VAR_NUMBER: z.number(),
   VAR_BOOL: z.boolean(),
+  CLARIFAI_API_KEY: z.string(),
+  CLARIFAI_MODEL_ID: z.string(),
+  CLARIFAI_MODEL_VERSION_ID: z.string(),
 });
 
 const buildTime = z.object({
@@ -106,6 +109,9 @@ const _clientEnv = {
   API_URL: process.env.API_URL,
   VAR_NUMBER: Number(process.env.VAR_NUMBER),
   VAR_BOOL: process.env.VAR_BOOL === 'true',
+  CLARIFAI_API_KEY: process.env.CLARIFAI_API_KEY,
+  CLARIFAI_MODEL_ID: process.env.CLARIFAI_MODEL_ID,
+  CLARIFAI_MODEL_VERSION_ID: process.env.CLARIFAI_MODEL_VERSION_ID,
 };
 
 /**
