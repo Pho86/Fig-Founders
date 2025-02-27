@@ -69,8 +69,20 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
         fonts: ['./assets/fonts/Inter.ttf'],
       },
     ],
-    'expo-localization',
-    'expo-router',
+    [
+      'expo-camera',
+      {
+        cameraPermission: 'Allow $(PRODUCT_NAME) to access your camera',
+      },
+    ],
+    [
+      'expo-image-picker',
+      {
+        photosPermission:
+          'The app accesses your photos to let you upload images to the app to scan.',
+      },
+    ],
+    ['expo-router'],
     ['app-icon-badge', appIconBadgeConfig],
     ['react-native-edge-to-edge'],
   ],
