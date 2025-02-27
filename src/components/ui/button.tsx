@@ -1,12 +1,12 @@
 import React from 'react';
-import type { PressableProps, View } from 'react-native';
-import { ActivityIndicator, Pressable, Text } from 'react-native';
+import type { PressableProps } from 'react-native';
+import { ActivityIndicator, Pressable, Text, type View } from 'react-native';
 import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
 const button = tv({
   slots: {
-    container: 'my-2 flex flex-row items-center justify-center rounded-md px-4',
+    container: 'my-2 flex flex-row items-center justify-center rounded-lg px-4',
     label: 'font-inter text-base font-semibold',
     indicator: 'h-6 text-white',
   },
@@ -46,11 +46,11 @@ const button = tv({
     },
     size: {
       default: {
-        container: 'h-10 px-4',
-        label: 'text-base',
+        container: 'h-12 px-4 py-2 ',
+        label: 'text-base font-bold',
       },
       lg: {
-        container: 'h-12 px-8',
+        container: 'h-14 px-8',
         label: 'text-xl',
       },
       sm: {
@@ -131,12 +131,14 @@ export const Button = React.forwardRef<View, Props>(
                 testID={testID ? `${testID}-activity-indicator` : undefined}
               />
             ) : (
-              <Text
-                testID={testID ? `${testID}-label` : undefined}
-                className={styles.label({ className: textClassName })}
-              >
-                {text}
-              </Text>
+              <>
+                <Text
+                  testID={testID ? `${testID}-label` : undefined}
+                  className={styles.label({ className: textClassName })}
+                >
+                  {text}
+                </Text>
+              </>
             )}
           </>
         )}

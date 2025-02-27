@@ -43,6 +43,15 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
+        name="food"
+        options={{
+          title: 'Food',
+          headerShown: true,
+          tabBarIcon: ({ color }) => <StyleIcon color={color} />,
+          tabBarButtonTestID: 'food-tab',
+        }}
+      />
+      <Tabs.Screen
         name="style"
         options={{
           title: 'Style',
