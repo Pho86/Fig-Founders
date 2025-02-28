@@ -5,6 +5,7 @@ import React, { useCallback, useEffect } from 'react';
 import { Pressable, Text } from '@/components/ui';
 import {
   Feed as FeedIcon,
+  FoodIcon,
   Settings as SettingsIcon,
   Style as StyleIcon,
 } from '@/components/ui/icons';
@@ -46,8 +47,8 @@ export default function TabLayout() {
         name="food"
         options={{
           title: 'Food',
-          headerShown: true,
-          tabBarIcon: ({ color }) => <StyleIcon color={color} />,
+          headerShown: false,
+          tabBarIcon: ({ color }) => <FoodIcon color={color} />,
           tabBarButtonTestID: 'food-tab',
         }}
       />
